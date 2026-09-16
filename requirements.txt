@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------------------
+# Core app / UI
+# ---------------------------------------------------------------------------
+streamlit==1.38.0
+python-dotenv==1.0.1
+
+# ---------------------------------------------------------------------------
+# LLM providers (both free-tier)
+# ---------------------------------------------------------------------------
+google-generativeai==0.8.3      # Gemini 1.5 Flash - vision captioning + generation
+groq==0.11.0                    # Llama 3.x - fast fallback / alt generation
+
+# ---------------------------------------------------------------------------
+# Document parsing
+# ---------------------------------------------------------------------------
+PyMuPDF==1.24.10                # fitz - PDF text + embedded image extraction
+pdfplumber==0.11.4               # table extraction from PDFs
+python-docx==1.1.2               # .docx parsing
+pytesseract==0.3.13               # OCR fallback for scanned/image-only pages
+Pillow==10.4.0                    # image handling
+
+# ---------------------------------------------------------------------------
+# Chunking / NLP
+# ---------------------------------------------------------------------------
+nltk==3.9.1                       # sentence tokenization for semantic chunker
+
+# ---------------------------------------------------------------------------
+# Embeddings + retrieval
+# ---------------------------------------------------------------------------
+sentence-transformers==3.1.1      # dense embeddings + cross-encoder reranker
+chromadb==0.5.5                   # local vector store (dense retrieval)
+rank_bm25==0.2.2                  # sparse retrieval (hybrid search)
+
+# ---------------------------------------------------------------------------
+# Utilities
+# ---------------------------------------------------------------------------
+numpy==1.26.4
+pandas==2.2.3
