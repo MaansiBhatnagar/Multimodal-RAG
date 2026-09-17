@@ -45,12 +45,12 @@ GROQ_API_KEY = get_secret("GROQ_API_KEY")
 # Gemini 1.5 Flash is natively multimodal (text + image in one call) and has
 # a generous free tier - used for vision captioning AND final answer
 # generation.
-GEMINI_MODEL = "gemini-1.5-flash"
+GEMINI_MODEL = "gemini-3.1-flash-lite"
 
 # Groq hosts Llama 3.x at very high throughput on a free tier - used as a
 # fast fallback if Gemini is rate-limited, and for lightweight query
 # transformation calls (HyDE / multi-query) to save Gemini quota.
-GROQ_MODEL = "llama-3.1-8b-instant"
+GROQ_MODEL = "openai/gpt-oss-20b"
 
 # Local, free, no-API embedding model. 384-dim, small enough to run on CPU
 # comfortably, strong performance on retrieval benchmarks for its size.

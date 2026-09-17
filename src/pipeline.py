@@ -187,7 +187,8 @@ class RAGPipeline:
 
         # Stage 10 (generation)
         answer = self.llm.generate_answer(prompt, image=image)
-        trace.add("Generation", "Gemini 1.5 Flash generated the final grounded answer.")
+        logger.info(f"Answer text (length={len(answer)}): {answer[:300]!r}")
+        trace.add("Generation", "Gemini 3.1 Flash-Lite generated the final grounded answer.")
 
         sources = [
             {

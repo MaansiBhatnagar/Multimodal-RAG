@@ -41,8 +41,17 @@ CUSTOM_CSS = """
     --brand-navy: #0F2C4C;
     --brand-teal: #1B998B;
     --brand-bg: #F7F9FB;
+    --brand-text: #1A2C42;
+    color-scheme: light;
 }
-.stApp { background-color: var(--brand-bg); }
+.stApp { background-color: var(--brand-bg); color: var(--brand-text); }
+
+[data-testid="stChatMessageContent"] p,
+[data-testid="stChatMessageContent"] div,
+[data-testid="stChatMessageContent"] li,
+[data-testid="stChatMessageContent"] span:not(.confidence-badge-high):not(.confidence-badge-low) {
+    color: var(--brand-text) !important;
+}
 
 /* Header banner */
 .hero {
